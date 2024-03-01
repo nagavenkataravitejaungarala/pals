@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PECAN+ Capture the Flag (CTF)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1f1f1f; /* Dark gray-blue */
+            color: #ccc; /* Light gray */
+            line-height: 1.6;
+        }
+        header {
+            background-color: #008000; /* Dark blue */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #292929; /* Dark gray */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .content {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .content h2 {
+            margin-top: 0;
+            color: #008000; /* Dark blue */
+            font-size: 24px;
+            border-bottom: 2px solid #008000; /* Dark blue */
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .content p {
+            margin-bottom: 15px;
+        }
+        .carousel {
+            width: 200px;
+            overflow-y: auto;
+            height: calc(100vh - 160px); /* Adjust height based on available space */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #333; /* Dark gray */
+        }
+        .carousel-content {
+            padding: 20px;
+        }
+        .carousel-content h2 {
+            margin-top: 0;
+            color: #008000; /* Dark blue */
+            font-size: 20px;
+            border-bottom: 2px solid #008000; /* Dark blue */
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .carousel-content ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .carousel-content li {
+            margin-bottom: 5px;
+            color: #ccc; /* Light gray */
+        }
+        .image-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+        }
+
+        .image-slider img {
+    max-width: 55%;
+    display: none; /* Hide images initially */
+    transition: opacity 0.5s ease;
+}
+
+.image-slider img.active {
+    display: block; /* Show active image */
+    opacity: 1;
+}
+        footer {
+            background-color: #002040; /* Dark blue */
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PECAN+ Capture the Flag (CTF)</h1>
+    </header>
+    <div class="image-slider">
+        <img src="pals.png" class="active">
+        <img src="image2.jpg">
+        <img src="image3.jpg">
+    </div>
+    <div class="container">
+        <div class="content">
+            <h2>PECAN+ is a Cyber Security Capture the Flag (CTF) competition</h2>
+            <p>PECAN+ is developed and managed by the School of Science at Edith Cowan University in Perth, Western Australia for Australian students. This year, PALS in collaboration with ECU have brought the PECAN+ CTF Competition to all Partner Institutions. The initiative aims to raise your practical skills and understanding of security, digital ecosystems and other emerging technology domains, and to boost Industry and Academic connections.</p>
+            <p>On Feb 15th, the Qualifier round of the CTF Competition witnessed a battle of brains between 107 student teams across various PALS Partner Institutions. For close to 2 hours, student teams competitively solved several cyber challenges covering Cryptography, Digital Forensics, OSINT, Steganography, Software Exploitation, Web Exploitation testing out their problem-solving, team building and cyber skills to secure their ranking on the leader board. Top 40 teams have progressed to the finals on March 6th, IITM.</p>
+        </div>
+        <div class="carousel">
+            <div class="carousel-content">
+                <h2>Finals: 40 Teams from Partner Institutions</h2>
+                <ul>
+                    <li>RI</li>
+                    <li>SRMKTR</li>
+                    <li>LICET</li>
+                    <li>KLU</li>
+                    <li>SONA</li>
+                    <li>RAMCO</li>
+                    <li>SRMRMPRM</li>
+                    <li>SVCE</li>
+                    <li>VCET</li>
+                    <li>KCG</li>
+                    <li>AALIM</li>
+                    <li>MEPCO</li>
+                    <li>EASWARI</li>
+                    <li>NANDHA</li>
+                    <li>DRMGR</li>
+                    <li>SWARNANDHRA</li>
+                    <li>VVCE</li>
+                    <li>TCE</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+   
+    <footer>
+        &copy; 2024 PECAN+ Capture the Flag (CTF)
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sliderImages = document.querySelectorAll('.image-slider img');
+            let currentImageIdx = 0;
+
+            function changeImage() {
+                sliderImages[currentImageIdx].classList.remove('active');
+                currentImageIdx = (currentImageIdx + 1) % sliderImages.length;
+                sliderImages[currentImageIdx].classList.add('active');
+            }
+
+            setInterval(changeImage, 100000000000000000); // Change image every 3 seconds
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PALS - Cyber Edge 2024</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e2e; /* Dark blue-gray */
+            color: #ccc; /* Light gray */
+            line-height: 1.6;
+        }
+        header {
+            background-color: #0a0a15; /* Dark blue */
+            color: #fff;
+            padding: 20px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        header img {
+            height: 50px; /* Adjust based on your logo's size */
+            margin-right: 20px;
+        }
+        header .title {
+            flex-grow: 1;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #292939; /* Dark gray */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #0a0a15; /* Dark blue */
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #ccc; /* Light gray */
+            font-weight: bold;
+            transition: color 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+        nav a:hover {
+            color: #fff; /* White */
+            border-bottom-color: #fff; /* White */
+        }
+        .program {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+        .program h2 {
+            color: #dcdcdc; /* Light gray */
+            font-size: 24px;
+            border-bottom: 2px solid #0056b3; /* Dark blue */
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .program p {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="PALS Logo_New.jpg" alt="PALS Logo">
+        <div class="title">
+            <h1>PALS - Cyber Edge 2024</h1>
+        </div>
+    </header>
+    <nav>
+        <a href="about.html">About</a>
+        <a href="ctf.html">Finalists</a>
+        <a href="testiomal.html">Testimonals</a>
+        <a href="conclave.html">Cyber Conclave</a>
+    </nav>
+    <div class="container">
+          <div class="program">
+            <h2>Educational Engagement between Edith Cowan University, Australia, and PALS Partner Institutions</h2>
+            <p>January 31st, 2024 - Online</p>
+            <p>PALS has collaborated with Edith Cowin University, West Australia with a focus towards building capabilities and knowledge partnerships in Cybersecurity.</p>
+            <p>In January, a virtual discussion was facilitated between ECU professors and PALS partner institutions to explore mutual areas of collaboration in research and education.</p>
+            <p>70+ participants comprising Heads of International Engagement Cells, Principals and Deans from our partner institutions attended this program with many expressing interest in engaging with ECU.</p>
+        </div>
+        <div class="program">
+            <h2>PECAN + CTF Prelims</h2>
+            <p>February 15th, 2024 - Online</p>
+            <p>An online CTF prelims with 110 student teams participating from our partner institutions. From the prelims, the top 40 teams have been selected for the CTF finals.</p>
+        </div>
+        <div class="program">
+            <h2>PECAN + CTF Finals</h2>
+            <p>March 5th, 2024 - Physical</p>
+            <p>The culmination of the above programs is the PECAN + CTF Finals on March 5th at IIT Madras Research Park.</p>
+        </div>
+        <div class="program">
+            <h2>Cybersecurity Conclave</h2>
+            <p>March 6th, 2024 - Physical</p>
+            <p>Cybersecurity conclave on March 6th at IIT Madras.</p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 PALS - Cyber Edge 2024
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let sliderImages = document.querySelectorAll('.image-slider img');
+            let currentImageIdx = 0;
+
+            function changeImage() {
+                sliderImages[currentImageIdx].classList.remove('active');
+                currentImageIdx = (currentImageIdx + 1) % sliderImages.length;
+                sliderImages[currentImageIdx].classList.add('active');
+            }
+
+            setInterval(changeImage, 1000000000); // Change image every 3 seconds
+        });
+    </script>
+</body>
+</html>
